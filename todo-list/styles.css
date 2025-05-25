@@ -1,0 +1,260 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.task-form {
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 45%;
+    height: 20%;
+    justify-content: space-between;
+    text-align: center;
+    display: flex;
+    margin-bottom: 20px;
+    background-color: #b8f2be;
+    border: 2px solid rgb(0, 111, 20);
+    border-radius: 30px;
+    padding: 1% 2%;
+}
+
+
+.task-form-inputs{
+    width: 45%;
+}
+
+
+.task-input{
+    font-size: 25px;
+    font-weight: 200;
+    padding: 15px;
+    padding-left: 30px;
+    border-radius: 40px;
+    border: 1px solid rgb(0, 0, 0);
+    width: 80%;
+
+}
+
+.category-priority-div{
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 7%;
+}
+
+
+.category-select{
+    width:60%;
+    font-size: 40px;
+}
+
+
+.priority-select{
+    width:60%;
+    font-size: 40px;
+    padding-left: 50%;
+}
+
+.date-input{
+    width: 58%;
+    border-radius: 10px;
+    border: 1px solid white;
+    font-size: 15px;
+    padding: .5%;
+
+}
+
+
+
+.line-between{
+    width: 1px;
+    height: 100%;
+    background-color: black;
+}
+
+
+
+
+
+.task-form-buttons{
+    width: 45%;
+    margin-top: 7%;
+}
+
+.task-form-buttons-addTask{
+    width: 70%;
+    background-color: #006917;
+    font-size: 20px;
+    font-weight: 200;
+    border: 1px solid #006917;
+    color: white;
+    padding: 10px 0;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.task-form-buttons-addTask:hover{
+    background-color: #015413;
+
+}
+
+.task-form-buttons-delCompleteTasks{
+    width: 70%;
+    background-color: #d71313;
+    font-size: 20px;
+    font-weight: 200;
+    border: 1px solid #d71313;
+    color: white;
+    padding: 10px 0;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-top: 2%;
+
+}
+
+.task-form-buttons-delCompleteTasks:hover{
+    background-color: #af1111;
+
+}
+
+
+
+.taskListDiv{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 50%;
+    height: 55%;
+    background-color: #8d760167;
+    border: 2px solid #714f00;
+    border-radius: 50px;
+    overflow-y: auto;
+}
+
+.tasksListTopicDiv{
+    background-color: #7d4900;
+    border-radius: 47.5px 47.5px 0 0;
+    height: 15%;
+    top: 0;
+    font-size: 50px;
+    color: white;
+    padding: 2% 0 0 5%;
+}
+
+.task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    width: 92%;
+    border-radius: 50px;
+    margin-left: -1%;
+    margin-top: 1%;
+    background-color: #ffffff;
+}
+
+.task-list li > span {
+    display: inline-block;
+}
+
+
+
+.task-list li > span:nth-child(2) {
+    width: 20%;
+    color: rgb(66, 66, 66);
+    text-align: center;
+    border-radius: 15px;
+    font-size: 25px;
+}
+
+.task-list li > span:nth-child(3) {
+    width: 20%;
+    color: rgb(100, 173, 100);
+    text-align: center;
+    border-radius: 15px;
+}
+
+.task-list li > span:nth-child(4) {
+    width: 15%;
+    color: orange;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.task-list li > span:nth-child(5) {
+    width: 25%;
+    color: lightblue;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.task-list li.completed {
+    color: #ffffff;
+    background-color: #006917a0;
+}
+
+.task-list li button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid black;
+    cursor:pointer;
+}
+
+.custom-checkbox {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 1%;
+    border: 1px solid black;
+}
+
+.custom-checkbox::after {
+    content: '\f00c';
+    font-family: 'FontAwesome';
+    font-size: 16px;
+    color: rgb(0, 111, 41);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.custom-checkbox::before {
+    content: '\f00c';
+    font-family: 'FontAwesome';
+    font-size: 16px;
+    color: rgb(0, 111, 41);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    display: none;
+}
+
+.custom-checkbox.checked::after {
+    display: block;
+}

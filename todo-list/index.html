@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Customizable To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="task-form">
+            <div class="task-form-inputs">
+                <input class="task-input" type="text" id="task-input" placeholder="Enter a task" required>
+
+                <div class="category-priority-div">
+                    <select class="category-select" id="category-select">
+                        <option value="">category</option>
+                        <option value="work">Work</option>
+                        <option value="personal">Personal</option>
+                        <option value="shopping">Shopping</option>
+                    </select>
+
+                    <select class="priority-select" id="priority-select">
+                        <option value="">priority</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+
+
+                </div>
+
+                <input class="date-input" type="date" id="deadline-input">
+            </div>
+
+            <div class="line-between"></div>
+
+            <div class="task-form-buttons">
+                <button class="task-form-buttons-addTask" id="add-task">Add Task</button>
+
+                <button class="task-form-buttons-delCompleteTasks" id="delete-completed-tasks">Delete Completed</button>
+            </div>
+
+        </div>
+        <div class="taskListDiv">
+            <div class="tasksListTopicDiv">
+                Tasks
+            </div>
+            <div class="task-list">
+                <ul id="task-list"></ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
